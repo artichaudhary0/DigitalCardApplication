@@ -1,0 +1,362 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/teal_700"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:textColorHint="@color/black">
+        </androidx.appcompat.widget.Toolbar>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:src="@drawable/person"
+            android:paddingTop="20dp"
+            app:civ_border_color="@color/teal_700" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:layout_below="@id/profile_pic"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="normal"
+            android:textFontWeight="700"
+            />
+
+        <!-- TextView for user designation -->
+        <TextView
+            android:id="@+id/userDesignation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/userName"
+            android:text="hello"
+            android:textColor="@color/white"
+            android:paddingHorizontal="20dp"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textFontWeight="700"
+            />
+
+        <!-- TextView for user company -->
+        <TextView
+            android:id="@+id/userCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userDesignation"
+            android:text="@string/this_is_a_whatsapp_number"
+            android:textColor="@color/white"
+            android:gravity="center"
+
+            android:paddingHorizontal="20dp"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textFontWeight="700"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:gravity="center"
+            android:id="@+id/iconsLayout"
+            >
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/callIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/call"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/messageIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/message"
+                />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/locationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/location"
+                />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/userAboutMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iconsLayout"
+            android:fontFamily="@font/inter_extrabold"
+            android:paddingHorizontal="20dp"
+            android:text="About Me"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/userAboutMeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userAboutMe"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="20dp"
+            android:text="Hi my name is arti chaudhary"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerThickness="2dp"
+            android:id="@+id/divider4"
+            app:dividerColor="@color/black"
+            android:layout_below="@+id/userAboutMeText"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <TextView
+            android:id="@+id/userContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider4"
+            android:fontFamily="@font/inter_extrabold"
+            android:paddingHorizontal="20dp"
+            android:text="Contact"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/userContactText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userContact"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="20dp"
+            android:text="Hi my name is arti chaudhary"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerThickness="2dp"
+            android:id="@+id/divider5"
+            app:dividerColor="@color/black"
+            android:layout_below="@+id/userContactText"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <TextView
+            android:id="@+id/userWhatsApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider5"
+            android:fontFamily="@font/inter_extrabold"
+            android:paddingHorizontal="20dp"
+            android:text="Whatsapp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/userWhatsAppText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userWhatsApp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="20dp"
+            android:text="Hi my name is arti chaudhary"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerThickness="2dp"
+            android:id="@+id/divider6"
+            app:dividerColor="@color/black"
+            android:layout_below="@+id/userWhatsAppText"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider6"
+            android:fontFamily="@font/inter_extrabold"
+            android:paddingHorizontal="20dp"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/userEmailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userEmail"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="20dp"
+            android:text="Hi my name is arti chaudhary"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerThickness="2dp"
+            android:id="@+id/divider7"
+            app:dividerColor="@color/black"
+            android:layout_below="@+id/userEmailText"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <TextView
+            android:id="@+id/userAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider7"
+            android:fontFamily="@font/inter_extrabold"
+            android:paddingHorizontal="20dp"
+            android:text="Address"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/userAddressText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userAddress"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="20dp"
+            android:text="Hi my name is arti chaudhary"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:dividerThickness="2dp"
+            android:id="@+id/divider8"
+            app:dividerColor="@color/black"
+            android:layout_below="@+id/userAddressText"
+            android:layout_marginHorizontal="20dp"
+            />
+
+        <TextView
+            android:id="@+id/userServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider8"
+            android:fontFamily="@font/inter_extrabold"
+            android:paddingHorizontal="20dp"
+            android:text="Services"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/userServicesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userServices"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/inter"
+            android:paddingHorizontal="20dp"
+            android:text="Hi my name is arti chaudhary"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userServices"
+            android:paddingTop="10dp"
+            android:id="@+id/editIconLayout"
+            android:weightSum="2"
+        >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/downloadIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:src="@drawable/download"
+        />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/editIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:src="@drawable/edit"
+        />
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">DigitalCardApplication</string>
+    <string name="next">Next</string>
+    <string name="add_multiple_services_with_services1_services2">Add multiple services with , (Services1, Services2... )</string>
+    <string name="services">Services</string>
+    <string name="service_info">Service Info</string>
+    <string name="address">Address</string>
+    <string name="email">Email</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="this_is_a_whatsapp_number">This is a Whatsapp Number</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="contact_info">Contact Info</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="full_name">Full Name</string>
+    <string name="designation">Designation</string>
+    <string name="company">Company</string>
+    <string name="about_me">About Me</string>
+</resources>

@@ -1,0 +1,376 @@
+
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:ellipsize="end"
+      android:textColorHint="@color/black"
+      android:background="@color/teal_700">
+
+    <!-- Text in Toolbar -->
+    <TextView
+        android:ellipsize="end"
+        android:id="@+id/toolbarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Digi Card"
+        android:gravity="center"
+        android:textColorHint="@color/black"
+        android:textFontWeight="900"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.1"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+  </androidx.appcompat.widget.Toolbar>
+
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/profile_pic"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:layout_below="@id/toolbar"
+      android:layout_alignParentEnd="true"
+      android:layout_gravity="center"
+      android:layout_marginEnd="129dp"
+
+      android:src="@drawable/person"
+      app:civ_border_color="@color/teal_700" />
+
+  <TextView
+      android:id="@+id/personalText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/profile_pic"
+      android:text="@string/personal_info"
+      android:textColor="@color/black"
+      android:paddingHorizontal="20dp"
+      android:textSize="24sp"
+      android:textStyle="normal"
+      android:textFontWeight="700"
+      />
+
+  <com.google.android.material.divider.MaterialDivider
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:dividerColor="@color/black"
+      android:layout_below="@+id/personalText"
+      android:id="@+id/divider"
+      android:layout_marginVertical="10dp"
+      app:dividerThickness="2dp"
+      android:layout_marginHorizontal="20dp"
+      />
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/full_name"
+      android:layout_marginHorizontal="20dp"
+      android:id="@+id/fullNameTextLayout"
+      android:layout_below="@id/divider"
+      app:hintTextColor="@color/black"
+      app:boxStrokeColor="@color/black"
+      app:boxBackgroundMode="outline"
+      android:textColorHint="@color/black"
+      >
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:id="@+id/fullNameText"
+        android:text=""
+        />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/designation"
+      android:layout_marginTop="20dp"
+      android:layout_marginHorizontal="20dp"
+      android:id="@+id/designationTextLayout"
+      android:layout_below="@id/fullNameTextLayout"
+      app:hintTextColor="@color/black"
+      app:boxStrokeColor="@color/black"
+      app:boxBackgroundMode="outline"
+      android:textColorHint="@color/black"
+      >
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text=""
+        android:id="@+id/designationText"
+        />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/company"
+      android:layout_marginTop="20dp"
+      android:layout_marginHorizontal="20dp"
+      android:id="@+id/companyTextLayout"
+      android:layout_below="@id/designationTextLayout"
+      app:hintTextColor="@color/black"
+      app:boxStrokeColor="@color/black"
+      app:boxBackgroundMode="outline"
+      android:textColorHint="@color/black"
+      >
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text=""
+        android:id="@+id/companyText"
+        />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/about_me"
+      android:layout_marginVertical="20dp"
+      android:layout_marginHorizontal="20dp"
+      android:id="@+id/aboutMeTextLayout"
+      android:layout_below="@id/companyTextLayout"
+      app:hintTextColor="@color/black"
+      app:boxStrokeColor="@color/black"
+      app:boxBackgroundMode="outline"
+      android:textColorHint="@color/black"
+      >
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text=""
+        android:id="@+id/aboutMeText"
+        android:height="120dp"
+        android:gravity="top"
+        />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+      android:id="@+id/contactInfo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/aboutMeTextLayout"
+      android:text="@string/contact_info"
+      android:textColor="@color/black"
+      android:paddingHorizontal="20dp"
+      android:textSize="24sp"
+      android:textStyle="normal"
+      android:textFontWeight="700"
+      />
+
+  <com.google.android.material.divider.MaterialDivider
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:dividerColor="@color/black"
+      android:layout_below="@+id/contactInfo"
+      android:id="@+id/divider2"
+      android:layout_marginVertical="10dp"
+      app:dividerThickness="2dp"
+      android:layout_marginHorizontal="20dp"
+      />
+
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/contact_number"
+      android:layout_marginTop="20dp"
+      android:layout_marginHorizontal="20dp"
+      android:id="@+id/contactNumberTextLayout"
+      android:layout_below="@id/divider2"
+      app:hintTextColor="@color/black"
+      app:boxStrokeColor="@color/black"
+      app:boxBackgroundMode="outline"
+      android:layout_marginBottom="10dp"
+      android:textColorHint="@color/black"
+      >
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text=""
+        android:id="@+id/contactNumberText"
+        />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+      android:id="@+id/whatsAppNumber"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/contactNumberTextLayout"
+      android:text="@string/this_is_a_whatsapp_number"
+      android:textColor="@color/black"
+      android:paddingHorizontal="20dp"
+      android:textSize="12sp"
+      android:textStyle="normal"
+      android:textFontWeight="700"
+      />
+
+
+  <RadioGroup
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/whatsAppNumber"
+      android:orientation="horizontal"
+      android:id="@+id/radioGroup"
+      android:layout_marginHorizontal="20dp">
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yesWhatsAppNumber"
+        android:text="@string/yes"
+        android:textColor="@color/black" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noWhatsAppNumber"
+        android:text="@string/no"
+        android:textColor="@color/black" />
+  </RadioGroup>
+
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/email"
+      android:layout_marginHorizontal="20dp"
+      android:id="@+id/emailTextLayout"
+      android:layout_below="@id/radioGroup"
+      app:hintTextColor="@color/black"
+      app:boxStrokeColor="@color/black"
+      app:boxBackgroundMode="outline"
+      android:textColorHint="@color/black"
+      >
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text=""
+        android:id="@+id/emailText"
+        />
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/address"
+      android:layout_marginHorizontal="20dp"
+      android:layout_marginVertical="20dp"
+      android:id="@+id/addressTextLayout"
+      android:layout_below="@id/emailTextLayout"
+      app:hintTextColor="@color/black"
+      app:boxStrokeColor="@color/black"
+      app:boxBackgroundMode="outline"
+      android:textColorHint="@color/black"
+      >
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text=""
+        android:id="@+id/addressText"
+        />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+      android:id="@+id/serviceInfo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/addressTextLayout"
+      android:text="@string/service_info"
+      android:textColor="@color/black"
+      android:paddingHorizontal="20dp"
+      android:textSize="24sp"
+      android:textStyle="normal"
+      android:textFontWeight="700"
+      />
+
+  <com.google.android.material.divider.MaterialDivider
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:dividerColor="@color/black"
+      android:layout_below="@+id/serviceInfo"
+      android:id="@+id/divider3"
+      android:layout_marginVertical="10dp"
+      app:dividerThickness="2dp"
+      android:layout_marginHorizontal="20dp"
+      />
+
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/services"
+      android:layout_marginBottom="10dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginHorizontal="20dp"
+      android:id="@+id/serviceInfoTextLayout"
+      android:layout_below="@id/serviceInfo"
+      app:hintTextColor="@color/black"
+      app:boxStrokeColor="@color/black"
+      app:boxBackgroundMode="outline"
+      android:textColorHint="@color/black"
+      >
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text=""
+        android:height="120dp"
+        android:gravity="top"
+        android:id="@+id/serviceInfoText"
+        />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+      android:id="@+id/servicesHint"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/serviceInfoTextLayout"
+      android:text="@string/add_multiple_services_with_services1_services2"
+      android:textColor="@color/black"
+      android:paddingHorizontal="20dp"
+      android:layout_marginBottom="20dp"
+      android:textSize="12sp"
+      android:textStyle="normal"
+      android:textFontWeight="700"
+      />
+
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/nextButton"
+      android:layout_below="@+id/servicesHint"
+      android:gravity="center"
+      android:layout_centerInParent="true"
+      android:text="@string/next"
+      android:textColor="@color/white"
+      android:layout_marginVertical="30dp"
+      />
+
+</RelativeLayout>
+
+</ScrollView>

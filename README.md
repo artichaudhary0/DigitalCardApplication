@@ -14,14 +14,23 @@ the Digital Card Application modernizes the traditional business card, making ne
 - Contribution
 
 ## Features
-- Details Screen for Each Calculator :
-  This app is stand for multiple calculators. Add all types
- calculator option in home screen and open different screen of each calculator app.
-- Form and Validation :
-  In this project user can add data like amount, rate of interest and many
-  other numeric data as per requirement so add from with validation functionality.
-- User Interface :
-  Master Calculator is stand for finance concept so create better UI as per concept with user attractive features. And also, user can easily understand way of the uses of application.
+- Relative Layout
+- splash screen
+- Change status bar color
+- Remove action bar
+- Toolbar
+- Library Integration                           
+- ImagePicker (Gallery and Camera)
+- Circleimageview
+- Glide
+- External font use
+
+Information Screen 
+- Created a Form with Material TextInputEditText & Validation
+- Material Divider
+- ScrollView
+- Radio Button
+- Custom dialog
 
 ## Technologies and Tools:
 - Java language

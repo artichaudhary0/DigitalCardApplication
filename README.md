@@ -36,6 +36,11 @@ Information Screen
 - Java language
 - Android Studio
 
+
+### Demo
+https://github.com/artichaudhary0/DigitalCardApplication/assets/71622834/a03e5fb1-e4ca-41f8-9346-fddda6eca55b
+
+
 ### Pictures of application 
 
 <img src="https://github.com/artichaudhary0/DigitalCardApplication/assets/71622834/f57a2b72-2d1c-4ab1-af62-47112c32434c" width="200"/>

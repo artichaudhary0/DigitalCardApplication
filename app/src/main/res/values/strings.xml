@@ -16,4 +16,14 @@
     <string name="designation">Designation</string>
     <string name="company">Company</string>
     <string name="about_me">About Me</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="hello">Hello</string>
+    <string name="content_font_style">Content Font Style</string>
+    <string name="content_theme">Content Theme</string>
+    <string name="header_theme">Header Theme</string>
+    <string name="todo">TODO</string>
+    <string name="hi_my_name_is_arti_chaudhary">Hi my name is arti chaudhary</string>
+    <string name="contact">Contact</string>
+    <string name="whatsapp">Whatsapp</string>
 </resources>

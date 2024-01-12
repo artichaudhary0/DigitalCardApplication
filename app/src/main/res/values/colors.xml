@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="splash_color">#FF49d1ed</color>
     <color name="progressColor">#ff2196F3</color>
+    <color name="material_dynamic_neutral70">#ffdcdcdc </color>
 </resources>

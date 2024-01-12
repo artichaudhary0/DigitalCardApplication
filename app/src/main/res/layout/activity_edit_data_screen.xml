@@ -1,26 +1,17 @@
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/mainRelative"
     android:fillViewport="true">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:id="@+id/cRelative"
+        android:background="@color/teal_700"
+        android:paddingBottom="20dp"
         >
-
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:background="@color/teal_700"
-            android:gravity="center"
-            android:ellipsize="end"
-            android:textColorHint="@color/black">
-        </androidx.appcompat.widget.Toolbar>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_pic"
@@ -34,14 +25,13 @@
             android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:gravity="center"
             android:layout_below="@id/profile_pic"
+            android:gravity="center"
+            android:text=""
             android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="normal"
             android:textFontWeight="700"
-            />
+            android:textSize="24sp"
+            android:textStyle="normal" />
 
         <!-- TextView for user designation -->
         <TextView
@@ -50,7 +40,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_below="@+id/userName"
-            android:text="hello"
+            android:text="@string/hello"
             android:textColor="@color/white"
             android:paddingHorizontal="20dp"
             android:textSize="18sp"
@@ -66,21 +56,34 @@
             android:layout_below="@+id/userDesignation"
             android:text="@string/this_is_a_whatsapp_number"
             android:textColor="@color/white"
-            android:gravity="center"
 
+            android:gravity="center"
             android:paddingHorizontal="20dp"
             android:textSize="18sp"
             android:textStyle="normal"
             android:textFontWeight="700"
             />
 
+
+
+
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cRelative"
+        android:background="@color/white"
+        android:id="@+id/contentRelative"
+
+        >
         <LinearLayout
+            android:id="@+id/iconsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/toolbar"
-            android:gravity="center"
-            android:id="@+id/iconsLayout"
-            >
+            android:layout_marginTop="0dp"
+            android:gravity="center">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/callIcon"
@@ -92,7 +95,8 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:src="@drawable/call"
-                />
+                android:contentDescription="@string/todo" />
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/messageIcon"
                 android:layout_width="wrap_content"
@@ -103,7 +107,8 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:src="@drawable/message"
-                />
+                android:contentDescription="@string/todo" />
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/locationIcon"
                 android:layout_width="wrap_content"
@@ -114,20 +119,19 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:src="@drawable/location"
-                />
+                android:contentDescription="@string/todo" />
 
 
         </LinearLayout>
-
-
         <TextView
             android:id="@+id/userAboutMe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/iconsLayout"
-            android:fontFamily="@font/inter_extrabold"
+           android:textFontWeight="900"
             android:paddingHorizontal="20dp"
-            android:text="About Me"
+            android:text="@string/about_me"
+
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="normal" />
@@ -138,31 +142,31 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/userAboutMe"
             android:layout_marginBottom="10dp"
-            android:fontFamily="@font/inter"
             android:paddingHorizontal="20dp"
-            android:text="Hi my name is arti chaudhary"
+            android:text="@string/hi_my_name_is_arti_chaudhary"
+
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="normal" />
 
         <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:dividerThickness="2dp"
-            android:id="@+id/divider4"
-            app:dividerColor="@color/black"
             android:layout_below="@+id/userAboutMeText"
             android:layout_marginHorizontal="20dp"
-            />
+            app:dividerColor="@color/material_dynamic_neutral70"
+            app:dividerThickness="2dp" />
 
         <TextView
             android:id="@+id/userContact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/divider4"
-            android:fontFamily="@font/inter_extrabold"
+
+            android:textFontWeight="900"
             android:paddingHorizontal="20dp"
-            android:text="Contact"
+            android:text="@string/contact"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="normal" />
@@ -175,7 +179,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/inter"
             android:paddingHorizontal="20dp"
-            android:text="Hi my name is arti chaudhary"
+            android:text="@string/hi_my_name_is_arti_chaudhary"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="normal" />
@@ -185,7 +189,7 @@
             android:layout_height="wrap_content"
             app:dividerThickness="2dp"
             android:id="@+id/divider5"
-            app:dividerColor="@color/black"
+            app:dividerColor="@color/material_dynamic_neutral70"
             android:layout_below="@+id/userContactText"
             android:layout_marginHorizontal="20dp"
             />
@@ -195,9 +199,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/divider5"
-            android:fontFamily="@font/inter_extrabold"
+
+            android:textFontWeight="900"
             android:paddingHorizontal="20dp"
-            android:text="Whatsapp"
+            android:text="@string/whatsapp"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="normal" />
@@ -210,7 +215,7 @@
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/inter"
             android:paddingHorizontal="20dp"
-            android:text="Hi my name is arti chaudhary"
+            android:text="@string/hi_my_name_is_arti_chaudhary"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="normal" />
@@ -220,7 +225,7 @@
             android:layout_height="wrap_content"
             app:dividerThickness="2dp"
             android:id="@+id/divider6"
-            app:dividerColor="@color/black"
+            app:dividerColor="@color/material_dynamic_neutral70"
             android:layout_below="@+id/userWhatsAppText"
             android:layout_marginHorizontal="20dp"
             />
@@ -230,9 +235,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/divider6"
-            android:fontFamily="@font/inter_extrabold"
+
             android:paddingHorizontal="20dp"
-            android:text="Email"
+            android:textFontWeight="900"
+            android:text="@string/email"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="normal" />
@@ -243,9 +249,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/userEmail"
             android:layout_marginBottom="10dp"
-            android:fontFamily="@font/inter"
+
             android:paddingHorizontal="20dp"
-            android:text="Hi my name is arti chaudhary"
+            android:text="@string/hi_my_name_is_arti_chaudhary"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="normal" />
@@ -255,7 +261,7 @@
             android:layout_height="wrap_content"
             app:dividerThickness="2dp"
             android:id="@+id/divider7"
-            app:dividerColor="@color/black"
+            app:dividerColor="@color/material_dynamic_neutral70"
             android:layout_below="@+id/userEmailText"
             android:layout_marginHorizontal="20dp"
             />
@@ -265,9 +271,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/divider7"
-            android:fontFamily="@font/inter_extrabold"
+
             android:paddingHorizontal="20dp"
-            android:text="Address"
+            android:textFontWeight="900"
+            android:text="@string/address"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="normal" />
@@ -278,9 +285,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/userAddress"
             android:layout_marginBottom="10dp"
-            android:fontFamily="@font/inter"
+
             android:paddingHorizontal="20dp"
-            android:text="Hi my name is arti chaudhary"
+            android:text="@string/hi_my_name_is_arti_chaudhary"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="normal" />
@@ -290,7 +297,7 @@
             android:layout_height="wrap_content"
             app:dividerThickness="2dp"
             android:id="@+id/divider8"
-            app:dividerColor="@color/black"
+            app:dividerColor="@color/material_dynamic_neutral70"
             android:layout_below="@+id/userAddressText"
             android:layout_marginHorizontal="20dp"
             />
@@ -300,9 +307,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/divider8"
-            android:fontFamily="@font/inter_extrabold"
+
             android:paddingHorizontal="20dp"
-            android:text="Services"
+            android:textFontWeight="900"
+            android:text="@string/services"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="normal" />
@@ -313,12 +321,15 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/userServices"
             android:layout_marginBottom="20dp"
-            android:fontFamily="@font/inter"
+
             android:paddingHorizontal="20dp"
-            android:text="Hi my name is arti chaudhary"
+            android:text="@string/hi_my_name_is_arti_chaudhary"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="normal" />
+        />
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -327,36 +338,34 @@
             android:paddingTop="10dp"
             android:id="@+id/editIconLayout"
             android:weightSum="2"
-        >
+            >
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/downloadIcon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|bottom"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="16dp"
-            android:layout_weight="1"
-            android:src="@drawable/download"
-        />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/downloadIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:src="@drawable/download"
+                android:contentDescription="@string/todo" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/editIcon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:layout_marginStart="260dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:layout_weight="1"
-            android:src="@drawable/edit"
-        />
-    </LinearLayout>
-
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/editIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:src="@drawable/edit"
+                android:contentDescription="@string/todo" />
+        </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
-
-</ScrollView>

@@ -44,6 +44,7 @@ Information Screen
 <img src="https://github.com/artichaudhary0/DigitalCardApplication/assets/71622834/0fd6eff7-7673-4cbc-a874-727b99b5f4cf" width="200"/>  
 <img src="https://github.com/artichaudhary0/DigitalCardApplication/assets/71622834/40ec5d9c-e1ab-4c84-94c0-d171d0e3d437" width="200"/>  
 <img src="https://github.com/artichaudhary0/DigitalCardApplication/assets/71622834/6d8dd9e6-56ae-4047-b23b-70059c51a372" width="200"/>
+<img scr="https://github.com/artichaudhary0/DigitalCardApplication/assets/71622834/a45ceaa0-cb5b-47cf-879a-3d24489fe0fd" width="200"/>
 
 ## Contribution
 We welcome all contributions. Here's how you can help:
